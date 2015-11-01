@@ -6,20 +6,20 @@ package foxman.presidents;
 public class Presidents {
     private int number;
     private String president;
-    private int birth_year;
-    private int death_year;
-    private String took_office;
-    private String left_office;
+    private int birthYear;
+    private int deathYear;
+    private String tookOffice;
+    private String leftOffice;
     private String party;
 
-    public Presidents(int number,String president,int birth_year,int death_year,String took_office,
-                      String left_office, String party){
+    public Presidents(int number,String president,int birthYear,int deathYear,String tookOffice,
+                      String leftOffice, String party){
         this.number = number;
         this.president = president;
-        this.birth_year = birth_year;
-        this.death_year = death_year;
-        this.took_office = took_office;
-        this.left_office = left_office;
+        this.birthYear = birthYear;
+        this.deathYear = deathYear;
+        this.tookOffice = tookOffice;
+        this.leftOffice = leftOffice;
         this.party = party;
     }
 
@@ -31,20 +31,20 @@ public class Presidents {
         return this.president;
     }
 
-    public int getBirth_year(){
-        return this.birth_year;
+    public int getBirthYear(){
+        return this.birthYear;
     }
 
-    public int getDeath_year(){
-        return this.death_year;
+    public Integer getDeathYear(){
+        return this.deathYear;
     }
 
-    public String getTook_office(){
-        return this.took_office;
+    public String getTookOffice(){
+        return this.tookOffice;
     }
 
-    public String getLeft_office(){
-        return this.left_office;
+    public String getLeftOffice(){
+        return this.leftOffice;
     }
 
     public String getParty(){
