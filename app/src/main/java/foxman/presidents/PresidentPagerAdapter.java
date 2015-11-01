@@ -32,13 +32,13 @@ public class PresidentPagerAdapter extends PagerAdapter{
         TextView party = (TextView) view.findViewById(id.party);
 
         Presidents president = presidents[position];
-        name.setText(president.getPresident());
-        number.setText(String.valueOf(president.getNumber()));
-        birthYear.setText((String.valueOf(president.getBirthYear())));
-        deathYear.setText((String.valueOf(president.getDeathYear())));
-        tookOffice.setText(president.getTookOffice());
-        leftOffice.setText(president.getLeftOffice());
-        party.setText((president.getParty()));
+        name.setText("President's Name: " + president.getPresident());
+        number.setText("Number: " + String.valueOf(president.getNumber()));
+        birthYear.setText("Year of Birth" + (String.valueOf(president.getBirthYear())));
+        deathYear.setText("Year of Death" + (String.valueOf(president.getDeathYear())));
+        tookOffice.setText("Took Office: " + president.getTookOffice());
+        leftOffice.setText("Left Office: " + president.getLeftOffice());
+        party.setText("Party: " + (president.getParty()));
         container.addView(view);
         return view;
 
