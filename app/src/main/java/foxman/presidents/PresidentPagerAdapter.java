@@ -1,5 +1,8 @@
 package foxman.presidents;
 
+import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,12 +35,21 @@ public class PresidentPagerAdapter extends PagerAdapter{
         TextView party = (TextView) view.findViewById(id.party);
 
         Presidents president = presidents[position];
+
+
+        name.setTextColor(Color.BLUE);
         name.setText("President's Name: " + president.getPresident());
+        number.setTextColor(Color.CYAN);
         number.setText("Number: " + String.valueOf(president.getNumber()));
-        birthYear.setText("Year of Birth" + (String.valueOf(president.getBirthYear())));
-        deathYear.setText("Year of Death" + (String.valueOf(president.getDeathYear())));
+        birthYear.setTextColor(Color.YELLOW);
+        birthYear.setText("Year of Birth: " + (String.valueOf(president.getBirthYear())));
+        deathYear.setTextColor(Color.GRAY);
+        deathYear.setText("Year of Death: " + (String.valueOf(president.getDeathYear())));
+        tookOffice.setTextColor(Color.GREEN);
         tookOffice.setText("Took Office: " + president.getTookOffice());
+        leftOffice.setTextColor(Color.MAGENTA);
         leftOffice.setText("Left Office: " + president.getLeftOffice());
+        party.setTextColor(Color.RED);
         party.setText("Party: " + (president.getParty()));
         container.addView(view);
         return view;
@@ -58,4 +70,6 @@ public class PresidentPagerAdapter extends PagerAdapter{
     public boolean isViewFromObject(View view, Object object) {
         return view == object;
     }
+
+
 }
