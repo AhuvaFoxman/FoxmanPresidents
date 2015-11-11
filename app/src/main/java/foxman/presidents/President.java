@@ -1,9 +1,8 @@
 package foxman.presidents;
 
-/**
- * Created by AFoxman on 10/22/2015.
- */
-public class Presidents {
+import java.io.Serializable;
+
+public class President implements Serializable{
     private int number;
     private String president;
     private int birthYear;
@@ -12,8 +11,8 @@ public class Presidents {
     private String leftOffice;
     private String party;
 
-    public Presidents(int number,String president,int birthYear,int deathYear,String tookOffice,
-                      String leftOffice, String party){
+    public President(int number, String president, int birthYear, int deathYear, String tookOffice,
+                     String leftOffice, String party){
         this.number = number;
         this.president = president;
         this.birthYear = birthYear;
